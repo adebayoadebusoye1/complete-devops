@@ -56,7 +56,7 @@ aws configure
 ```
 
 ```
-git clone https://github.com/akurasy/devops-complete.git
+git clone https://github.com/adebayoadebusoye1/complete-devops.git
 ```
 
 change directory to the terraform directory where all infrastructure code is kept.
@@ -260,7 +260,7 @@ WHEN THIS IMAGE GETS TO AWS ECR, THIS IS WHERE OUR KUBERNETES DEPLOYMENT STARTS 
 # step3 (Continous Deployment using Helm and Argocd)
 
 # First Phase (setting up Helm Chart)
-goto to your jump-server where you cloned this application, cd to the helm working directory
+go to to your jump-server where you cloned this application, cd to the helm working directory
  ```
 cd Kubernetes/helm
 
@@ -355,7 +355,7 @@ spec:
     spec:
       containers:
         - name: frontend-{{ .Values.namespace }}
-          image: "166937434313.dkr.ecr.us-east-1.amazonaws.com/frontend:{{ .Values.tag }}"
+          image: "public.ecr.aws/m1f0t2e1/frontend:{{ .Values.tag }}"
           imagePullPolicy: Always
           ports:
             - containerPort: 5173
@@ -431,7 +431,7 @@ spec:
     spec:
       containers:
         - name: backend-{{ .Values.namespace }}
-          image: 166937434313.dkr.ecr.us-east-1.amazonaws.com/backend:{{ .Values.tag }}
+          image: public.ecr.aws/m1f0t2e1/backend:{{ .Values.tag }}
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
@@ -663,7 +663,7 @@ hpa:
   targetCPUUtilizationPercentage: 80
 
 env:
-  VITE_API_URL: "http://dev-app.myakuracy.click"
+  VITE_API_URL: "http://dev-app.adebayo.click"
 ```
 
 ```
@@ -696,7 +696,7 @@ hpa:
 
 env:
   - name: DOMAIN
-    value: "http://dev-app.myakuracy.click"
+    value: "http://dev-app.adebayo.click"
   - name: ENVIRONMENT
     value: "local"
   - name: PROJECT_NAME
@@ -704,13 +704,13 @@ env:
   - name: STACK_NAME
     value: "full-stack-fastapi-project"
   - name: BACKEND_CORS_ORIGINS
-    value: "http://dev.myakuracy.click"
+    value: "http://dev.adebayo.click"
   - name: SECRET_KEY
     value: "changethis123"
   - name: FIRST_SUPERUSER
-    value: "devops@hng.tech"
+    value: "adebayoadebusoye@yahoo.com"
   - name: FIRST_SUPERUSER_PASSWORD
-    value: "devops#HNG11"
+    value: "Adebayo123"
   - name: USERS_OPEN_REGISTRATION
     value: "True"
   - name: SMTP_HOST
@@ -782,7 +782,7 @@ deployPostgres: false
 deployIngress: true
 
 rules:
-  - frontend_host: dev.myakuracy.click
+  - frontend_host: dev.adebayo.click
     http:
       paths:
         - path: /
@@ -792,7 +792,7 @@ rules:
               name: frontend-dev
               port:
                 number: 5173
-  - backend_host: dev-app.myakuracy.click
+  - backend_host: dev-app.adebayo.click
     http:
       paths:
         - path: /
@@ -864,9 +864,9 @@ kubectl get ingress -n dev
 
 We can then copy the load balancer DNS address and create an A record for it as follows:
 
-frontend - dev.myakuracy.click
+frontend - dev.adebayo.click
 
-backend - api-dev.myakuracy.click
+backend - api-dev.adebayo.click
 
 ![record page](./images/route53.png)
 
@@ -875,7 +875,7 @@ for each deployments
 
 now browse your frontend using the DNS name 
 ```
-http://dev.myakuracy.click # you can use your own domain as you wish
+http://dev.adebayo.click # you can use your own domain as you wish
 ```
 Login and check if there is an handshake between the frontend, backend and postgres database, use the login credentials in the super user created inside the backend environmental variable, which can found inside the values-backend-dev.yaml file.
 
@@ -1118,8 +1118,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.email "akurracy@gmail.com"
-        git config --global user.name "Oke Babatunde"
+        git config --global user.email "bade05343@gmail.com"
+        git config --global user.name "Adebayo Adebusoye"
         git add Kubernetes/helm/fastapi-chart/values-frontend-dev.yaml
         git commit -m "Update tag in Helm chart Frontend dev"
         git push
@@ -1261,8 +1261,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.email "akurracy@gmail.com"
-        git config --global user.name "Oke Babatunde"
+        git config --global user.email "bade05343@gmail.com"
+        git config --global user.name "Adebayo Adebusoye"
         git add Kubernetes/helm/fastapi-chart/values-backend-dev.yaml
         git commit -m "Update tag in Helm chart Backend dev"
         git push

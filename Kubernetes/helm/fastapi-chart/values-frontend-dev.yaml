@@ -20,4 +20,4 @@ hpa:
   targetCPUUtilizationPercentage: 80
 
 env:
-  VITE_API_URL: "http://dev-app.myakuracy.click"
+  VITE_API_URL: "http://dev-app.sogbae.click"

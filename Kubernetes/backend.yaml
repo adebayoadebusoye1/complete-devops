@@ -15,13 +15,13 @@ spec:
     spec:
       containers:
         - name: backend
-          image: 166937434313.dkr.ecr.us-east-1.amazonaws.com/backend
+          image: public.ecr.aws/m1f0t2e1/backend
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
           env:
             - name: DOMAIN
-              value: "http://app.myakuracy.click"
+              value: "http://app.sogbae.click"
             - name: ENVIRONMENT
               value: "local"
             - name: PROJECT_NAME
@@ -29,13 +29,13 @@ spec:
             - name: STACK_NAME
               value: "full-stack-fastapi-project"
             - name: BACKEND_CORS_ORIGINS
-              value: "http://myakuracy.click,http://localhost:5173,http://aa7b65c0910c1416d8253afec5453881-1818623458.us-east-1.elb.amazonaws.com:5173"
+              value: "http://sogbae.click,http://localhost:5173,http://aa7b65c0910c1416d8253afec5453881-1818623458.us-east-1.elb.amazonaws.com:5173"
             - name: SECRET_KEY
               value: "changethis123"
             - name: FIRST_SUPERUSER
-              value: "devops@hng.tech"
+              value: "adebayoadebusoye@yahoo.com"
             - name: FIRST_SUPERUSER_PASSWORD
-              value: "devops#HNG11"
+              value: "Adebayo123"
             - name: USERS_OPEN_REGISTRATION
               value: "True"
             - name: SMTP_HOST

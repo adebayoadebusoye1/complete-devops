@@ -22,7 +22,7 @@ hpa:
 
 env:
   - name: DOMAIN
-    value: "http://dev-app.myakuracy.click"
+    value: "http://dev-app.sogbae.click"
   - name: ENVIRONMENT
     value: "local"
   - name: PROJECT_NAME
@@ -30,13 +30,13 @@ env:
   - name: STACK_NAME
     value: "full-stack-fastapi-project"
   - name: BACKEND_CORS_ORIGINS
-    value: "http://dev.myakuracy.click"
+    value: "http://dev.sogbae.click"
   - name: SECRET_KEY
     value: "changethis123"
   - name: FIRST_SUPERUSER
-    value: "devops@hng.tech"
+    value: "adebayoadebusoye@yahoo.com"
   - name: FIRST_SUPERUSER_PASSWORD
-    value: "devops#HNG11"
+    value: "Adebayo123"
   - name: USERS_OPEN_REGISTRATION
     value: "True"
   - name: SMTP_HOST

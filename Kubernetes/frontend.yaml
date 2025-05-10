@@ -15,13 +15,13 @@ spec:
     spec:
       containers:
         - name:  frontend
-          image: 166937434313.dkr.ecr.us-east-1.amazonaws.com/frontend
+          image: public.ecr.aws/m1f0t2e1/frontend
           imagePullPolicy: Always
           ports:
             - containerPort: 5173
           env:
             - name: VITE_API_URL
-              value: "http://app.myakuracy.click"
+              value: "http://http://a3e0360c8f9dc470caf7c60de25203b6-837670652.us-east-1.elb.amazonaws.com:8000"
           resources:
             requests:
               cpu: "250m"
@@ -45,7 +45,7 @@ spec:
     - protocol: TCP
       port: 5173
       targetPort: 5173
-  type: ClusterIP
+  type: LoadBalancer
 
 ---
 apiVersion: autoscaling/v1

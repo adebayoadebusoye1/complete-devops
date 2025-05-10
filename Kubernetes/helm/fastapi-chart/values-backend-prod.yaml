@@ -23,7 +23,7 @@ hpa:
 
 env:
   - name: DOMAIN
-    value: "http://app.myakuracy.click"
+    value: "http://app.sogbae.click"
   - name: ENVIRONMENT
     value: "local"
   - name: PROJECT_NAME
@@ -31,13 +31,13 @@ env:
   - name: STACK_NAME
     value: "full-stack-fastapi-project"
   - name: BACKEND_CORS_ORIGINS
-    value: "http://myakuracy.click"
+    value: "http://sogbae.click"
   - name: SECRET_KEY
     value: "changethis123"
   - name: FIRST_SUPERUSER
-    value: "isaacambi2@gmail.com"
+    value: "adebayoadebusoye@yahoo.com"
   - name: FIRST_SUPERUSER_PASSWORD
-    value: "Isaacambi1234#"
+    value: "Adebayo1"
   - name: USERS_OPEN_REGISTRATION
     value: "True"
   - name: SMTP_HOST
