@@ -82,9 +82,9 @@ terraform apply --auto-approve
 connect the cluster with the command 
 
 ```
-aws eks update-kubeconfig --name zik-cluster --region us-east-1
+aws eks update-kubeconfig --name adebayo-cluster --region us-east-2
 
-#the name of my cluster is zik-cluster and the cluster is deployed in us-east-1 region
+#the name of my cluster is adebayo-cluster and the cluster is deployed in us-east-1 region
 ```
 ![main page](./images/cluster-connect.png)
 
